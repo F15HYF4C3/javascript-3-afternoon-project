@@ -22,8 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
+let {color, make, model, year} = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -35,7 +34,7 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
-  
+  let {firstName, lastName, title} = obj;
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
   // Do not edit the code above.
@@ -53,9 +52,38 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
+// examp:
+// function sum( obj ) {
+//   var sum = 0;
+//   for( var el in obj ) {
+//     if( obj.hasOwnProperty( el ) ) {
+//       sum += parseFloat( obj[el] );
+//     }
+//   }
+//   return sum;
+// }
+    
+// var sample = { a: 1 , b: 2 , c:3 };
+// var summed = sum( sample );
+// console.log( "sum: "+summed );
+
 //Code Here
+let objecto = {
+  utah:300,
+  california: 800,
+  texas: 3000,
+  arizona: 600
+}
 
+function totalPopulation(objecto){
+  var total = 0;
+  for(var prop in objecto){
+    total += parseFloat(objecto[prop]);
+  }
+  return total;
+  }
 
+console.log(totalPopulation(objecto));
 
 ////////// PROBLEM 4 //////////
 
@@ -68,7 +96,19 @@ function greeting( obj ) {
 */
 
 //Code Here
+let meHaveCakeLoL = {
+  carb: "All the carbs",
+  fat: "Too Much Fat Added",
+  protein: "Why would cake have protein?"
+}
 
+function ingredients(meHaveCakeLoL){
+  let cake = [];
+  for (var prop in meHaveCakeLoL){
+    cake.push(meHaveCakeLoL[prop]);
+  }
+  return cake;
+}
 
 
 ////////// PROBLEM 5 //////////
@@ -86,7 +126,21 @@ function greeting( obj ) {
 */
 
 //Code Here
+let meNumba = {
+  first: 1,
+  second: 2,
+  third: 3
+}
 
+function largeNumbers({first, second, third}){
+let looking = [];
+let smallest;
+for (var prop in meNumba){
+  looking.push(meNumba[prop]);
+  console.log(looking);
+}
+return smallest;
+}
 
 
 ////////// PROBLEM 6 //////////
